@@ -48,9 +48,9 @@ lambda_values <- attr(lg.s.c, 'Lambda')
 lambda_values$v = log(lambda_values$v)
 log_intensity_value = lambda_values$v
 
-par(mfrow = c(1,2), oma = c(0, 0, 0, 4))
-image(lambda_values, col = viridis(256), main = "")
-par(mfrow = c(1,1), oma = c(0, 0, 0, 0))
+# par(mfrow = c(1,2), oma = c(0, 0, 0, 4))
+# image(lambda_values, col = viridis(256), main = "")
+# par(mfrow = c(1,1), oma = c(0, 0, 0, 0))
 
 
 
@@ -105,8 +105,8 @@ n_test = length(loc_test[,1])
 pl.dom = cbind(c(0,domain_max,domain_max,0), c(0,0,domain_max,domain_max))
 bnd1 = Polygon(pl.dom, hole = FALSE)
 mesh_full = inla.mesh.2d(loc_test, pl.dom, boundary = bnd1, max.edge = 0.4)
-plot(mesh_full)
-points(xy.c_observed)
+# plot(mesh_full)
+# points(xy.c_observed)
 
 N = nrow(xy.c_observed)
 n = mesh_full$n
