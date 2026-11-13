@@ -10,7 +10,7 @@ Below, we first provide an overview of all R code files included in the director
 
 ## NNGP construction and Model Fitting
 - `./src/dual_mesh_loc.R`: Performs Voronoi tessellation over the observation domain to obtain integration points and weights used in approximating the LGCP likelihood.
-- `./src/NNMatrix.R` and `./src/functions.R`: Contain functions for efficiently computing the NNGP approximation of the prior covariance matrix. These files are adapted from https://github.com/LuZhangstat/ConjugateNNGP 。
+- `./src/NNMatrix.R` and `./src/functions.R`: Contain functions for efficiently computing the NNGP approximation of the prior covariance matrix. These files use the original NNGP implementation from https://github.com/LuZhangstat/ConjugateNNGP.
 - `2_nngp_prior.R`: Compute the NNGP prior approximation.
 - `optimization_hyper_diag.R`: The core implementation of the VoGCAM algorithm.
 - `3_full_case_result.R`: Provide comparison results between the proposed method and baseline methods such as INLA and VIFRK.
